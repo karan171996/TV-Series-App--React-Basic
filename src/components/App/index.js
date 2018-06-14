@@ -1,11 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
-
-const Intro =(props)=>(
-  <p className="App-intro">
-    Our first functional Component
-  </p>
-)
+import Main from '../Main';
+import 'whatwg-fetch';
 class App extends Component {
   render() {
     return (
@@ -13,7 +9,7 @@ class App extends Component {
         <header className="App-header">
           <h1 className="App-title">TV Series List</h1>
         </header>
-         <Intro/>
+         <Main />
       </div>
     );
   }
