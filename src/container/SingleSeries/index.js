@@ -23,8 +23,16 @@ class SingleSeries extends Component{
                    <p>{show.name}</p>
                    <img src={show.image.original}/>
                    <p>Rating-{show.rating.average}</p>
+                   <p>
+                       {show.genres.map((name)=>(
+                           <span key={name}>
+                               {name}
+                           </span>
+                       ))}
+                   </p>
                    <p>Summary-{show.summary}</p>
                    <p>Episodes-{show._embedded.episodes.length}</p>  
+                   
                </div>
                }
             </div>
