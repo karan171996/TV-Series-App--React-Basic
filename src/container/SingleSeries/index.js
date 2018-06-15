@@ -12,7 +12,7 @@ class SingleSeries extends Component{
     .then(json => this.setState({show:json}))
     }
     render(){
-        const {id,show} =this.state;
+        const {show} =this.state;
         console.log(show);
          return(
             <div>
@@ -21,7 +21,7 @@ class SingleSeries extends Component{
                {show !==null && 
                <div>
                    <p>{show.name}</p>
-                   <img src={show.image.original}/>
+                   <img src={show.image.original} alt="Tv series poster"/>
                    <p>Rating-{show.rating.average}</p>
                    <p>
                        {show.genres.map((name)=>(
